@@ -1,0 +1,22 @@
+{
+  "name": "amf",
+  "version": "1.0.0",
+  "description": "Austin Moving Forward theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbareshet/amf.git"
+  },
+  "author": "Ido Barnea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barbareshet/amf/issues"
+  },
+  "homepage": "https://github.com/barbareshet/amf#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

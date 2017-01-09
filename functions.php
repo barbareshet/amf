@@ -137,8 +137,14 @@ add_action( 'widgets_init', 'amf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function amf_scripts() {
+
+	//Normalize
+	wp_enqueue_style('amf-normalize', get_stylesheet_directory_uri() . '/assets/css/normalize.css', [], microtime());
 	//bootstrap
-	wp_enqueue_style('amf-bootstrap', get_stylesheet_directory_uri() . '/assets/css/bootstrap.css', [], microtime());
+	wp_enqueue_style('amf-bootstrap', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', [], microtime());
+
+	//jansy-bootstrap
+	wp_enqueue_style('amf-jansy-bootstrap-style', get_stylesheet_directory_uri() . '/assets/css/jasny-bootstrap.min.css', [], microtime());
 
 	//fontawesome
 	wp_enqueue_style('amf-fontawesome', get_stylesheet_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', [], microtime());
@@ -146,7 +152,9 @@ function amf_scripts() {
 
 
 	//bootstrap scripts
-	wp_enqueue_script('amf-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), microtime(), true);
+	wp_enqueue_script('amf-bootstrap-script', get_stylesheet_directory_uri() . '/assets/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), microtime(), true);
+	//jasny-bootstrap
+	wp_enqueue_script('amf-jasny-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/jasny-bootstrap.min.js', array('jquery'), microtime(), true);
 	//main theme js
 	wp_enqueue_script('amf-main-script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), microtime(), true);
 	wp_enqueue_script( 'amf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
