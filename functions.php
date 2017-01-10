@@ -152,7 +152,7 @@ function amf_scripts() {
 
 
 	//bootstrap scripts
-	wp_enqueue_script('amf-bootstrap-script', get_stylesheet_directory_uri() . '/assets/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), microtime(), true);
+	wp_enqueue_script('amf-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), microtime(), true);
 	//jasny-bootstrap
 	wp_enqueue_script('amf-jasny-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/jasny-bootstrap.min.js', array('jquery'), microtime(), true);
 	//main theme js
@@ -257,3 +257,9 @@ function themeInit()
 }
 
 themeInit();
+
+/**
+ * Custom Post Types.
+ */
+require get_template_directory() . '/inc/post_types/services_post_type.php';
+require get_template_directory() . '/inc/post_types/faq_post_type.php';
