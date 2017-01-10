@@ -262,4 +262,4 @@ themeInit();
  * Custom Post Types.
  */
 require get_template_directory() . '/inc/post_types/services_post_type.php';
-require get_template_directory() . '/inc/post_types/faq_post_type.php';
+//require get_template_directory() . '/inc/post_types/faq_post_type.php';
