@@ -241,15 +241,15 @@ function themeInit()
 		return $path;
 	}
 
-//	add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-//
-//	function my_acf_json_load_point($paths)
-//	{
-//		unset($paths[0]);
-//		$paths[] = get_stylesheet_directory() . '/inc/plugins/acf_json';
-//		//wp_die(var_dump($paths));
-//		return $paths;
-//	}
+	add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+
+	function my_acf_json_load_point($paths)
+	{
+		unset($paths[0]);
+		$paths[] = get_stylesheet_directory() . '/inc/plugins/acf_json';
+		//wp_die(var_dump($paths));
+		return $paths;
+	}
 
 	//acf fields and options
 	include_once(get_template_directory() . '/inc/plugins/acf-repeater-editor-accordion/acf-repeater-accordion.php');
