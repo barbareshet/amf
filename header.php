@@ -23,7 +23,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amf' ); ?></a>
 	<div class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-		<a class="navmenu-brand" href="#">Project name</a>
+        <?php $logo = get_field('site_logo', 'options')?>
+		<a class="navmenu-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt']; ?>"></a>
 		<?php wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'menu_id' => 'primary-menu',

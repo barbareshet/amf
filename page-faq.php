@@ -62,5 +62,5 @@ get_template_part('template-parts/globals/content', 'top-page');
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

@@ -1,4 +1,4 @@
-<section id="hero" data-type="background">
+<section id="hero" data-type="background" data-speed="2">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">

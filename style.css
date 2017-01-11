@@ -39,6 +39,19 @@ body {
 .navbar-default .navbar-toggle:focus {
 	background-color: transparent;
 }
+/*pages */
+.top-page{
+	min-height: 650px;
+
+}
+.top-page-title-wrap{
+	text-align: center;
+	
+}
+.top-page-title-wrap .page-title{
+	color: #ffffff;
+}
+/*Media Queries*/
 @media (min-width: 0) {
 	.navbar-toggle {
 		display: block; /* force showing the toggle */
