@@ -24,6 +24,7 @@ body {
 	float: left;
 	margin-left: 15px;
 }
+
 #hero{
 	min-height: 550px;
 	background: url(http://www.austinmovingforward.com/wp-content/uploads/2015/04/austin-moving-company-header.jpg) no-repeat 50% 50%;
@@ -41,7 +42,7 @@ body {
 }
 /*pages */
 .top-page{
-	min-height: 650px;
+	height: 500px;
 
 }
 .top-page-title-wrap{
@@ -50,6 +51,22 @@ body {
 }
 .top-page-title-wrap .page-title{
 	color: #ffffff;
+}
+.topbar-brand img{
+	width: 100%;
+	height:auto;
+}
+#topbar .phone-num{
+	text-align: left;
+}
+#topbar .phone-num i,
+#topbar .phone-num a{
+	color: #ffffff;
+	font-size:24px;
+	font-weight:bold;
+}
+#primary{
+	margin: 50px 0;
 }
 /*Media Queries*/
 @media (min-width: 0) {
@@ -63,7 +80,8 @@ body {
 		padding: 0;
 	}
 	.navbar {
-		right: auto;
+		top:25px;
+		left:35px;
 		background: none;
 		border: none;
 	}

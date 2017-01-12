@@ -3,6 +3,27 @@
     "title": "faq",
     "fields": [
         {
+            "key": "field_58776f458047a",
+            "label": "secondary title",
+            "name": "secondary_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_587556f31b829",
             "label": "faq",
             "name": "faq",
@@ -95,5 +116,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1484112301
+    "modified": 1484222334
 }
