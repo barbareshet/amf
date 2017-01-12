@@ -6,8 +6,8 @@
  * Time: 9:19 AM
  */
 // Register Custom Post Type
-function services_post_type() {
 //Custom Post Types
+function services_post_type() {
     $labels = array(
         'name'                  => _x( 'Services', 'Post Type General Name', 'amf' ),
         'singular_name'         => _x( 'Service', 'Post Type Singular Name', 'amf' ),
@@ -52,6 +52,7 @@ function services_post_type() {
         'has_archive'           => false,
         'exclude_from_search'   => true,
         'publicly_queryable'    => true,
+        'menu_icon'             => 'dashicons-admin-tools',
         'capability_type'       => 'post',
     );
     register_post_type( 'Services', $args );
