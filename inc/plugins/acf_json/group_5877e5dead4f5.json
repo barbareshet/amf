@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5877e5ec57cca",
-            "label": "hero",
-            "name": "",
+            "label": "Hero section",
+            "name": "hero_section",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -62,8 +62,8 @@
         },
         {
             "key": "field_5877e61657ccd",
-            "label": "buttons",
-            "name": "",
+            "label": "Hero buttons",
+            "name": "hero_buttons",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -73,7 +73,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -149,6 +149,142 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5878cc1285444",
+            "label": "home page optin",
+            "name": "home_page_optin",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5878cc4385445",
+            "label": "hp optin title",
+            "name": "hp_optin_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5878cc5485446",
+            "label": "hp optin text",
+            "name": "hp_optin_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5878cc6585447",
+            "label": "hp optin form",
+            "name": "hp_optin_form",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_5878d2b87fc9e",
+            "label": "Home page services",
+            "name": "home_page_services",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5878d30b4b45a",
+            "label": "hp services title",
+            "name": "hp_services_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5878d3294b45b",
+            "label": "hp services",
+            "name": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "filters": [
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 4,
+            "return_format": "object"
         }
     ],
     "location": [
@@ -166,14 +302,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content",
         "excerpt",
-        "custom_fields",
         "discussion",
         "comments",
         "revisions",
@@ -185,5 +319,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1484252915
+    "modified": 1484313829
 }

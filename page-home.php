@@ -18,11 +18,13 @@ get_header();
 
 
     get_template_part('template-parts/home/content', 'hp-hero');
-	get_template_part('template-parts/home/content', 'hp-footr');
+	get_template_part('template-parts/home/content', 'hp-topbar');
+	get_template_part('template-parts/home/content', 'hp-optin-top');
+
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main " role="main">
+	<div id="primary" class="content-area section">
+		<main id="main" class="site-main container" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();
@@ -36,7 +38,11 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+<div class="section" id="hp-services">
+	<?php  get_template_part('template-parts/home/content', 'hp-services'); ?>
+</div>
 
 <?php
-
+get_template_part('template-parts/globals/content', 'bottom-optin-page');
+get_template_part('template-parts/home/content', 'hp-testimonials');
 get_footer();

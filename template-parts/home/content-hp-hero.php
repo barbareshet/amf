@@ -1,4 +1,4 @@
-<section id="hero" data-type="background" data-speed="2">
+<section id="hero">
 	<?php get_template_part('template-parts/globals/content', 'topbar');?>
 	<div class="container hp-title-wrapper">
 		<div class="row">
