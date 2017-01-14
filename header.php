@@ -22,25 +22,5 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amf' ); ?></a>
-	<div class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-        <?php $logo = get_field('site_logo_small', 'options')?>
-		<a class="navmenu-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt']; ?>"></a>
-		<?php wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_id' => 'primary-menu',
-					'menu_class' => 'nav navmenu-nav')
-					); ?>
-
-
-	</div>
-
-	<div class="navbar navbar-default navbar-fixed-top" id="nav-btn">
-		<button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-	</div>
-
-
+        <?php get_template_part('template-parts/globals/content', 'navbar-top');?>
 	<div id="content" class="site-content">

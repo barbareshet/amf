@@ -1,8 +1,5 @@
 <?php
 
-$photo = get_field('photo', $service->ID);
-
-
 
     $services = get_posts(array(
     'post_type' => 'services',
@@ -20,10 +17,14 @@ $photo = get_field('photo', $service->ID);
                 <h3 class="section-title"><?php the_field('hp_services_title');?></h3>
             </div>
             <?php foreach( $services as $service ):?>
-                <div class="service-card panel col-md-3 col-sm-6 col-xs-12">
+                <div class="service-card panel panel-default col-md-3 col-sm-6 col-xs-12">
                     <a href="<?php echo get_permalink( $service->ID ); ?>">
-                        <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" width="30" />
-                        <?php echo get_the_title( $service->ID ); ?>
+                        <?php $photo = get_field('service_image', $service->ID);?>
+                        <img src="<?php echo $photo['url']; ?>" alt="" />
+
+                        <h3 class="card-title">
+                            <?php echo get_the_title( $service->ID ); ?>
+                        </h3>
                     </a>
                 </div>
             <?php endforeach; ?>

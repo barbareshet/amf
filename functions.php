@@ -67,7 +67,7 @@ function amf_setup() {
 	add_theme_support('post-formats', array());
 	add_image_size('hero-image', 1920, 500, true);
 	add_image_size('top-image-pages', 1920, 500, true);
-	add_image_size('service-image', 476, 339, true);
+	add_image_size('service-image', 250, 250, true);
 	add_image_size('blog-post', 555, 370, true);
 	add_image_size('single-post', 1920, 554, true);
 
@@ -112,20 +112,38 @@ function amf_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
-		'name' => esc_html__('Footer widgets 1', 'yna'),
-		'id' => 'sidebar15',
+		'name' => esc_html__('Footer widgets 1', 'amf'),
+		'id' => 'footer-1',
 		'description' => '',
-		'before_widget' => '<div id="%1$s" class="widget col7 %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	));
 
 	register_sidebar(array(
-		'name' => esc_html__('Footer widgets 2', 'yna'),
-		'id' => 'sidebar33',
+		'name' => esc_html__('Footer widgets 2', 'amf'),
+		'id' => 'footer-2',
 		'description' => '',
-		'before_widget' => '<div id="%1$s" class="widget col2 %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	));
+    register_sidebar(array(
+		'name' => esc_html__('Footer widgets 3', 'amf'),
+		'id' => 'footer-3',
+		'description' => '',
+		'before_widget' => '<div id="%1$s" class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	));
+    register_sidebar(array(
+		'name' => esc_html__('Footer widgets 4', 'amf'),
+		'id' => 'footer-4',
+		'description' => '',
+		'before_widget' => '<div id="%1$s" class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',

@@ -73,8 +73,16 @@
 
 //
 jQuery(document).ready(function ($) {
-    
-    
+    $('.panel-title').bind('click', function(){
+
+        var topParent = $('div.panel');
+        var parent = $('div.panel-collapse');
+
+        if(parent.hasClass('in')){
+            topParent.first().find('.fa').removeClass('fa-plus');
+            topParent.first().find('.fa').addClass('fa-minus');
+        }
+    });
 
 });
 

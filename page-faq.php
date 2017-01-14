@@ -35,14 +35,14 @@ get_template_part('template-parts/globals/content', 'top-page');
 
 							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="heading<?php echo $count;  ?>">
+									<div class="panel-heading question" role="tab" id="heading<?php echo $count;  ?>">
 										<h4 class="panel-title">
 											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $count; ?>" aria-expanded="true" aria-controls="collapse<?php echo $count; ?>">
-												<?php the_sub_field('faq_q');?>
+												<i class="fa fa-plus"></i> <?php the_sub_field('faq_q');?>
 											</a>
 										</h4>
 									</div>
-									<div id="collapse<?php echo $count; ?>" class="panel-collapse collapse <?php if ($count == 1 ){echo 'in';} ;?>" role="tabpanel" aria-labelledby="heading<?php echo $count; ?>">
+									<div id="collapse<?php echo $count; ?>" class="panel-collapse collapse answer <?php if ($count == 1 ){echo 'in';} ;?>" role="tabpanel" aria-labelledby="heading<?php echo $count; ?>">
 										<div class="panel-body">
 											<?php the_sub_field('faq_a');?>
 										</div>

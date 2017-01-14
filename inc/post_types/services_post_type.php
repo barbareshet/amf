@@ -55,6 +55,6 @@ function services_post_type() {
         'menu_icon'             => 'dashicons-admin-tools',
         'capability_type'       => 'post',
     );
-    register_post_type( 'Services', $args );
+    register_post_type( 'services', $args );
 }
 add_action( 'init', 'services_post_type', 0 );

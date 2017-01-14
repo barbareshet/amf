@@ -35,8 +35,8 @@ body {
 }
 .navmenu ul{
 	background: #75CE5A;
-	padding-left: 0px;
-	margin-left: 15px;
+	padding: 20px;
+	margin-left: 0;
 	list-style-type: none;
 }
 .navmenu ul li.page_item{
@@ -132,6 +132,35 @@ margin-top: 75px;
 	font-size: 2.1em;
 	font-weight: 600;
 }
+.service-card{
+	border:none;
+	text-align: center;
+}
+.service-card img{
+	min-height: 180px;
+}
+.service-card a h3.card-title{
+	text-decoration: none;
+	color: #0b401f;
+}
+.service-card a:hover{
+	text-decoration: none;
+}
+.service-card a:hover h3.card-title{
+	color: #A5D28C;
+}
+#bottom-optin{
+	background: url('assets/images/bottom-optin-bg.png') 50% 50% no-repeat;
+	background-size: cover;
+	height: 450px;
+	padding: 20px 40px;
+}
+
+/* =============
+            FAQ PAGE
+            ===================*/
+
+
 /*Media Queries*/
 @media (min-width: 0) {
 	.navbar-toggle {
