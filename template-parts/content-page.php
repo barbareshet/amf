@@ -25,10 +25,7 @@ $page_title = get_post_meta($post->ID,'page title', true);
 		<?php
 			the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amf' ),
-				'after'  => '</div>',
-			) );
+
 		?>
 	</div><!-- .entry-content -->
 
