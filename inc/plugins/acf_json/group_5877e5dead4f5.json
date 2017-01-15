@@ -229,7 +229,7 @@
         {
             "key": "field_5878d2b87fc9e",
             "label": "Home page services",
-            "name": "home_page_services",
+            "name": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -276,7 +276,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
+            "post_type": [
+                "services"
+            ],
             "taxonomy": [],
             "filters": [
                 "post_type"
@@ -319,5 +321,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1484313829
+    "modified": 1484459506
 }
