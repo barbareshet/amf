@@ -281,3 +281,4 @@ themeInit();
  */
 require get_template_directory() . '/inc/post_types/services_post_type.php';
 require get_template_directory() . '/inc/post_types/testimonials_post_type.php';
+require get_template_directory() . '/inc/post_types/video_post_type.php';
