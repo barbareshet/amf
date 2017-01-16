@@ -10,10 +10,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-6 btn-wrapper text-right">
+			<div class="col-sm-6 col-xs-6 btn-wrapper text-right">
 				<a class="btn btn-success btn-lg" href="#"><?php the_field('left_btn_text');?></a>
 			</div>
-			<div class="col-sm-6 btn-wrapper text-left">
+			<div class="col-sm-6 col-xs-6 btn-wrapper text-left">
 				<a class="btn btn-default btn-lg" href="#"><?php the_field('right_btn_text');?></a>
 			</div>
 		</div>

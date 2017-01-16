@@ -52,7 +52,7 @@ body {
 	border:none;
 }
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #fff;
+	background-color: #0B401F;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -77,12 +77,12 @@ margin-top: 75px;
 }
 #hp-optin-top{
 
-	background-image: -ms-linear-gradient(top left, #A5D28C 45%, #0B401F 100%);
-	background-image: -moz-linear-gradient(top left, #A5D28C 45%, #0B401F 100%);
-	background-image: -o-linear-gradient(top left, #A5D28C 45%, #0B401F 100%);
-	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(45, #A5D28C), color-stop(100, #0B401F));
-	background-image: -webkit-linear-gradient(top left, #A5D28C 45%, #0B401F 100%);
-	background-image: linear-gradient(to bottom right, #A5D28C 45%, #0B401F 100%);
+	background-image: -ms-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
+	background-image: -moz-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
+	background-image: -o-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(60, #A5D28C), color-stop(100, #0B401F));
+	background-image: -webkit-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
+	background-image: linear-gradient(to bottom right, #A5D28C 60%, #0B401F 100%);
 	min-height: 350px;
 	color: #ffffff;
 	padding:25px 0;
@@ -120,6 +120,12 @@ margin-top: 75px;
 #primary ul{
 	margin-left: 0px;
 	padding-left: 15px
+}
+.top-page-optin{
+	min-height:250px;
+	border-bottom: 2px solid #A5D28C;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 #primary p,
 #primary a{
@@ -178,4 +184,30 @@ margin-top: 75px;
 		background: none;
 		border: none;
 	}
+}
+@media (max-width: 768px){
+    .navbar-default.navbar-fixed-top {
+        background-color: #A5D28C;
+        border-color: #e7e7e7;
+    }
+    .top-page{
+        height: 250px;
+    }
+    #topbar .logo{
+        text-align: center;
+        margin-top: 30px;
+    }
+    #topbar .logo img{
+        width: 25%;
+        height:auto;
+    }
+    #topbar .phone-num{
+        position: fixed;
+        top:0;
+        right: 0;
+        left: 50px;
+        z-index: 99999;
+        margin-top: 10px;
+        text-align: center;
+    }
 }

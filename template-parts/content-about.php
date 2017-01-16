@@ -18,7 +18,7 @@
 //            the_title( '<h1 class="entry-title">', '</h1>' );
 //        }?>
     </header><!-- .entry-header -->
-    <?php get_template_part('template-parts/content', 'about-optin-top'); ?>
+
     <div class="entry-content col-sm-12">
         <?php
         the_content();

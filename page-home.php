@@ -44,5 +44,5 @@ get_header();
 
 <?php
 get_template_part('template-parts/globals/content', 'bottom-optin-page');
-get_template_part('template-parts/home/content', 'hp-testimonials');
+get_template_part('template-parts/content', 'testimonials');
 get_footer();

@@ -287,6 +287,64 @@
             "min": "",
             "max": 4,
             "return_format": "object"
+        },
+        {
+            "key": "field_587c591144c9b",
+            "label": "Testimonial section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_587c58f744c99",
+            "label": "testimonial section title",
+            "name": "testimonial_section_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_587c590444c9a",
+            "label": "testimonial section description",
+            "name": "testimonial_section_desc",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -321,5 +379,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1484459506
+    "modified": 1484544303
 }
