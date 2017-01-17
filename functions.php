@@ -173,6 +173,8 @@ function amf_scripts() {
 	wp_enqueue_script('amf-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), microtime(), true);
 	//jasny-bootstrap
 	wp_enqueue_script('amf-jasny-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/jasny-bootstrap.min.js', array('jquery'), microtime(), true);
+	//readmore.js
+	wp_enqueue_script('amf-readmore-script', get_stylesheet_directory_uri() . '/assets/js/readmore.min.js', array('jquery'), microtime(), true);
 	//main theme js
 	wp_enqueue_script('amf-main-script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), microtime(), true);
 	wp_enqueue_script( 'amf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

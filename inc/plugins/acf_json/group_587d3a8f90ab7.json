@@ -1,6 +1,6 @@
 {
     "key": "group_587d3a8f90ab7",
-    "title": "Video",
+    "title": "Videos",
     "fields": [
         {
             "key": "field_587d3aa99fef9",
@@ -95,5 +95,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1484604066
+    "modified": 1484631542
 }

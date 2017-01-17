@@ -83,6 +83,20 @@ jQuery(document).ready(function ($) {
             topParent.first().find('.fa').addClass('fa-minus');
         }
     });
-
 });
+
+//Read more for videos
+(function($) {
+    $(document).ready(function($){
+
+        console.log('ok');
+
+        $('.video-desc-wrap').readmore({
+            speed: 75,
+            lessLink: '<a href="#">Read less</a>',
+            collapsedHeight:0
+        });
+
+    });
+})(jQuery)
 
