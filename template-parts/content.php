@@ -9,39 +9,36 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+<article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
+	<div class="col-md-3 col-sm-6 col-xs-12 blog-post">
+        <?php if (has_post_thumbnail() ) ://check for feature image?>
+        <div class="post-image">
+            <?php the_post_thumbnail();?>
+        </div><!--end post-image-->
+        <?php endif;?>
+		<header class="entry-header">
+			<?php
+			if ( is_single() ) :
+				the_title( '<h3 class="entry-title">', '</h3>' );
+			else :
+				the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+			endif;
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php amf_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+			if ( 'post' === get_post_type() ) : ?>
+				<div class="entry-meta">
+					<?php amf_posted_on(); ?>
+				</div><!-- .entry-meta -->
+				<?php
+			endif; ?>
+		</header><!-- .entry-header -->
+		<div class="entry-content">
+			<?php
+			the_excerpt();
+			?>
+		</div><!-- .entry-content -->
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'amf' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amf' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+	</div>
+	<!-- /.col-md-3 col-sm-6 col-xs-12 blog-post -->
 
-	<footer class="entry-footer">
-		<?php amf_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

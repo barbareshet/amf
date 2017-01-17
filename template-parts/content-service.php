@@ -13,20 +13,20 @@
 	<header class="entry-header col-sm-12">
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		endif;
 
         ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content col-sm-8">
+	<div class="entry-content col-sm-9">
 		<?php
 			the_field('service_content');
 		?>
 	</div><!-- .entry-content -->
-    <aside class="col-sm-4">
+    <aside class="col-sm-3">
         <?php get_sidebar();?>
     </aside>
 <!--	<footer class="entry-footer">-->

@@ -40,7 +40,7 @@ get_template_part('template-parts/content', 'page-optin-top');
                 </div>
             </div>
             <div class="row" id="benefits">
-                <div class="col-md-8 col-md-offset-2 col-sm-12 inner-container">
+                <div class="col-md-8 col-md-offset-3 col-sm-12 inner-container">
 
 
                 <?php

@@ -31,5 +31,4 @@ get_template_part('template-parts/content', 'page-optin-top');
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

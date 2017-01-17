@@ -11,28 +11,52 @@ if (has_post_thumbnail() ){//check for feature image?>
                     <?php
                     if($page_title){
                         echo "<h1>{$page_title}</h1>";
-                    } else{
+                    } elseif(is_singular('services') && $page_title = get_field('service_name')){
+
+                        echo "<h1 class='entry-title'>{$page_title}</h1>";
+                    }else{
                         the_title( '<h1 class="entry-title">', '</h1>' );
                     }?>
-                    <p class="secondary-title"><?php the_field('secondary_title');?></p>
+                    <?php $secondary_title = get_field('secondary_title');
+                        if($secondary_title) :?>
+                            <div class="secondary-title lead">
+                                <?php echo $secondary_title;?>
+                            </div>
+                     <?php else: ?>
+                            <div class="secondary-title lead">
+                                <?php the_field('service_description');?>
+                            </div>
+                     <?php endif;?>
                 </div>
             </div>
         </div>
     </section>
 
 <?php }else {//fallback / default image?>
-    <section class="top-page feature-image-default">
-        <?php get_template_part('template-parts/content', 'top-bar');?>
+    <section class="top-page feature-image-default" style="background:url('<?php the_post_thumbnail_url("top-image-pages");?>') 50% 50% no-repeat; background-size: cover;">
+        <?php get_template_part('template-parts/globals/content', 'topbar');?>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 top-page-title-wrap">
                     <?php
                     if($page_title){
                         echo "<h1>{$page_title}</h1>";
-                    } else{
+                    } elseif(is_singular('services') && $page_title = get_field('service_name')){
+
+                        echo "<h1 class='entry-title'>{$page_title}</h1>";
+                    }else{
                         the_title( '<h1 class="entry-title">', '</h1>' );
                     }?>
-                    <p class="secondary-title"><?php the_field('secondary_title');?></p>
+                    <?php $secondary_title = get_field('secondary_title');
+                    if($secondary_title) :?>
+                        <div class="secondary-title lead">
+                            <?php echo $secondary_title;?>
+                        </div>
+                    <?php else: ?>
+                        <div class="secondary-title lead">
+                            <?php the_field('service_description');?>
+                        </div>
+                    <?php endif;?>
                 </div>
             </div>
         </div>

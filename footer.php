@@ -8,12 +8,13 @@
  *
  * @package amf
  */
-
+get_template_part('template-parts/globals/content', 'bottom-optin-page');
+get_template_part('template-parts/content', 'testimonials');
 ?>
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer section" role="contentinfo">
+	<footer id="colophon" class="site-footer container" role="contentinfo">
 		<?php get_template_part('template-parts/globals/content','bottom-nav-page');?>
         <div class="container">
             <div class="row">

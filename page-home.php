@@ -43,6 +43,4 @@ get_header();
 </div>
 
 <?php
-get_template_part('template-parts/globals/content', 'bottom-optin-page');
-get_template_part('template-parts/content', 'testimonials');
 get_footer();
