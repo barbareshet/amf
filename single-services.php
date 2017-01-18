@@ -8,9 +8,11 @@
  */
 
 
+
+get_header();
 get_template_part('template-parts/globals/content', 'top-page');
 get_template_part('template-parts/content', 'page-optin-top');
-get_header(); ?>
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">

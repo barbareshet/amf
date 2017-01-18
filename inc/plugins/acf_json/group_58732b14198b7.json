@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_58732bbb2d8cf",
-            "label": "local schema",
-            "name": "",
+            "label": "Local schema",
+            "name": "local_schema",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -194,8 +194,8 @@
         },
         {
             "key": "field_58732bdf2d8d0",
-            "label": "social",
-            "name": "",
+            "label": "Social",
+            "name": "social",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -273,8 +273,8 @@
         },
         {
             "key": "field_587c676319626",
-            "label": "Top bar Section",
-            "name": "top_bar_section",
+            "label": "Topbar Section",
+            "name": "topbar_section",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -471,5 +471,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484718685
+    "modified": 1484729125
 }
