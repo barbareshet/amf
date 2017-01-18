@@ -273,8 +273,8 @@
         },
         {
             "key": "field_587c676319626",
-            "label": "Top Optin Section",
-            "name": "",
+            "label": "Top bar Section",
+            "name": "top_bar_section",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -286,6 +286,90 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_587f01eb5bcb2",
+            "label": "comment btn text",
+            "name": "comment_btn_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_587f023d5bcb4",
+            "label": "comment btn link",
+            "name": "comment_btn_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_587f021f5bcb3",
+            "label": "contact btn text",
+            "name": "contact_btn_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_587f02525bcb5",
+            "label": "contact btn link",
+            "name": "contact_btn_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         },
         {
             "key": "field_587e706834b76",
@@ -387,5 +471,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484681557
+    "modified": 1484718685
 }

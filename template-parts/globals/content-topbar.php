@@ -10,7 +10,7 @@
 
 ?>
 
-<div class="container" id="topbar">
+<div class="container-fluid" id="topbar">
     <div class="row">
         <div class="col-md-3 col-sm-12 logo">
                 <?php $logo = get_field('site_logo_big', 'options')?>
@@ -24,15 +24,19 @@
                 <?php the_field('company_phone', 'options');?>
             </a>
         </div>
-        <div class="col-md-3 hidden-sm contact-btns">
+        <div class="col-md-3 hidden-sm hidden-xs contact-btns">
             <div class="row">
                 <div class="col-md-6 comment-btn-wrap text-right">
-                    <a href="" class="btn btn-default comment-btn"></a>
+                    <a href="<?php the_field('comment_btn_link', 'options');?>" class="btn btn-default comment-btn">
+                        <?php the_field('comment_btn_text', 'options');?>
+                    </a>
                     <!-- /.btn btn-default comment-btn -->
                 </div>
                 <!-- /.col-md-6 col-sm-12 comment-btn-wrap -->
                 <div class="col-md-6 contact-btn-wrap">
-                    <a href="" class="btn btn-default contact-btn"></a>
+                    <a href="<?php the_field('contact_btn_link', 'options');?>" class="btn btn-default contact-btn">
+                        <?php the_field('contact_btn_text', 'options');?>
+                    </a>
                     <!-- /.btn btn-default comment-btn -->
                 </div>
                 <!-- /.col-md-6 col-sm-12 comment-btn-wrap -->

@@ -105,9 +105,17 @@ margin-top: 75px;
 .top-page-title-wrap .page-title{
 	color: #ffffff;
 }
-.topbar-brand img{
-	width: 100%;
+/*topbar*/
+#topbar {
+	padding:15px 0;
+}
+#topbar .logo{
+	text-align: right;
+}
+.logo .topbar-brand img{
+	width: 50%;
 	height:auto;
+
 }
 
 #topbar .phone-num i,
@@ -115,6 +123,13 @@ margin-top: 75px;
 	color: #ffffff;
 	font-size:24px;
 	font-weight:bold;
+}
+.comment-btn,
+.contact-btn{
+	background: transparent;
+	border-radius: 0;
+	color: #ffffff;
+	font-weight:400;
 }
 #primary{
 	margin: 50px 0;
@@ -241,7 +256,7 @@ margin-top: 75px;
         text-align: center;
         margin-top: 30px;
     }
-    #topbar .logo img{
+    #topbar .logo a img{
         width: 25%;
         height:auto;
     }
