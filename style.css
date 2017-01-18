@@ -107,10 +107,16 @@ margin-top: 75px;
 }
 /*topbar*/
 #topbar {
-	padding:15px 0;
+	padding:25px 0;
 }
 #topbar .logo{
 	text-align: right;
+}
+#nav-btn{
+    left: 0;
+}
+#nav-btn button.navbar-toggle{
+    left: 35px;
 }
 .logo .topbar-brand img{
 	width: 50%;
@@ -131,6 +137,16 @@ margin-top: 75px;
 	color: #ffffff;
 	font-weight:400;
 }
+#topbar .btn{
+    border-color: #000;
+}
+#topbar .btn:hover{
+    background: #ffffff;
+    color: #000000;
+}
+#topbar .btn:visited{
+    color: #000;
+}
 #primary{
 	margin: 50px 0;
 }
@@ -140,9 +156,38 @@ margin-top: 75px;
 }
 .top-page-optin{
 	min-height:250px;
-	border-bottom: 2px solid #A5D28C;
+	/*border-bottom: 2px solid #A5D28C;*/
     margin-top: 30px;
     margin-bottom: 30px;
+}
+.top-optin-btn-wrap{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.top-optin-btn-wrap .btn{
+
+    padding: 10px 20px;
+    font-size: 20px;
+    min-width: 260px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 0;
+}
+.top-optin-btn-wrap a.quote-btn {
+    background: #164626;
+    border-color: #164626;
+}
+.top-optin-btn-wrap a.book-btn{
+    background: #ffffff;
+    border-color: #164626;
+    color: #164626;
+}
+.top-optin-btn-wrap a.quote-btn:hover,
+.top-optin-btn-wrap a.book-btn:hover{
+    background: #A5D28C;
+    border-color: #164626;
+    color: #ffffff;;
 }
 #primary p,
 #primary a{

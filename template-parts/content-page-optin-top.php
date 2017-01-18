@@ -19,13 +19,13 @@
                 </p>
             </div>
         </div>
-        <div class="row about-optin-btn-wrap">
-            <div class="col-sm-6 col-xs-6 quote-btn-'רשפ text-right">
+        <div class="row top-optin-btn-wrap">
+            <div class="col-sm-6 col-xs-6 quote-btn-wrap text-right">
                 <a href="<?php the_field('optin_btn_left_link');?>" class="btn quote-btn btn-info">
                     <?php the_field('optin_btn_left_text');?>
                 </a>
             </div>
-            <div class="col-sm-6 col-xs-6 book-btn-'רשפ text-left">
+            <div class="col-sm-6 col-xs-6 book-btn-wrap text-left">
                 <a href="<?php the_field('optin_btn_right_link');?>" class="btn book-btn btn-info">
                     <?php the_field('optin_btn_right_text');?>
                 </a>
