@@ -15,22 +15,23 @@ get_header();
 get_template_part('template-parts/globals/content', 'top-page');
 
 ?>
+<div class="row main-row">
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main container" role="main">
 
             <?php
             if ( have_posts() ) :
-            while ( have_posts() ) : the_post();
+                while ( have_posts() ) : the_post();
 
-                get_template_part( 'template-parts/content', get_post_format() );
+                    get_template_part( 'template-parts/content', get_post_format() );
 
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
+                    // If comments are open or we have at least one comment, load up the comment template.
+                    if ( comments_open() || get_comments_number() ) :
+                        comments_template();
+                    endif;
 
-            endwhile; // End of the loop.
+                endwhile; // End of the loop.
 
                 the_posts_navigation();
 
@@ -43,6 +44,7 @@ get_template_part('template-parts/globals/content', 'top-page');
 
         </main><!-- #main -->
     </div><!-- #primary -->
+</div>
 
 
 <?php

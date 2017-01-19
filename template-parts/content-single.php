@@ -24,15 +24,18 @@ $page_title = get_post_meta($post->ID,'page title', true);
 
         <?php endif; ?>
     </header><!-- .entry-header -->
-    <div class="col-md-8 col-sm-12" id="the_content">
+    <div class="col-md-9 col-sm-12" id="the_content">
 
             <?php the_content();?>
 
         <!--end excerpt-->
     </div>
     <!-- /.col-md-8 co -sm-12 -->
-    <div class="col-md-4 col-sm-12 sidebar">
-        <?php get_sidebar();?>
+    <div class="col-md-3 col-sm-12 sidebar">
+        <?php if(is_active_sidebar('sidebar-blog')){
+            dynamic_sidebar('sidebar-blog');
+        }
+        ?>
     </div>
     <!-- /.col-md-4 col-sm-12 sidebar -->
 </article><!-- #post-## -->
