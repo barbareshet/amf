@@ -26,16 +26,12 @@ get_template_part('template-parts/globals/content', 'top-page');
 
                     get_template_part( 'template-parts/content', get_post_format() );
 
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-
                 endwhile; // End of the loop.
-
-                the_posts_navigation();
-
-            else :
+            ?>
+            <div class="col-sm-12 text-center loadmore-btn-wrap">
+                <a href="#" class="btn btn-success btn-loadmore">Load More</a>
+            </div><!-- /.col-sm-12 text-center loadmore-btn-wrap -->
+            <?php else :
 
                 get_template_part( 'template-parts/content', 'none' );
 

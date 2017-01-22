@@ -183,8 +183,17 @@ function amf_scripts() {
 	//jasny-bootstrap
 	wp_enqueue_script('amf-jasny-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/jasny-bootstrap.min.js', array('jquery'), microtime(), true);
 	//readmore.js
-	wp_enqueue_script('amf-readmore-script', get_stylesheet_directory_uri() . '/assets/js/readmore.min.js', array('jquery'), microtime(), true);
-	//main theme js
+    wp_enqueue_script('amf-readmore-script', get_stylesheet_directory_uri() . '/assets/js/readmore.min.js', array('jquery'), microtime(), true);
+
+    //ajax-pagination
+    wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/assets/js/ajax-pagination.js', array( 'jquery' ), microtime(), true );
+    global $wp_query;
+    wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'query_vars' => json_encode( $wp_query->query )
+    ));
+
+    //main theme js
 	wp_enqueue_script('amf-main-script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), microtime(), true);
 	wp_enqueue_script( 'amf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -195,6 +204,7 @@ function amf_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'amf_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
@@ -293,3 +303,38 @@ themeInit();
 require get_template_directory() . '/inc/post_types/services_post_type.php';
 require get_template_directory() . '/inc/post_types/testimonials_post_type.php';
 require get_template_directory() . '/inc/post_types/video_post_type.php';
+
+function my_ajax_pagination() {
+    $query_vars = json_decode( stripslashes( $_POST['query_vars'] ), true );
+
+    $query_vars['paged'] = $_POST['page'];
+
+
+    $posts = new WP_Query( $query_vars );
+    $GLOBALS['wp_query'] = $posts;
+
+    add_filter( 'editor_max_image_size', 'my_image_size_override' );
+
+    if( ! $posts->have_posts() ) {
+        get_template_part( 'content', 'none' );
+    }
+    else {
+        while ( $posts->have_posts() ) {
+            $posts->the_post();
+            get_template_part( 'content', get_post_format() );
+        }
+    }
+    remove_filter( 'editor_max_image_size', 'my_image_size_override' );
+
+    die();
+}
+
+add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
+add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
+
+function my_image_size_override() {
+    return array( 825, 510 );
+}
+
+add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
+add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
