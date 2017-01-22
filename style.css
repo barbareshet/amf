@@ -26,9 +26,15 @@ body {
 }
 
 #hero{
-	min-height: 550px;
+	min-height: 600px;
 	background: url('assets/img/home.jpg') no-repeat 50% 50%;
 	background-size: cover;
+}
+#hero .hero-overlay{
+    position: absolute;
+    width:100%;
+    height:600px;
+    background: rgba(0,0,0,0.45);
 }
 .navmenu{
 	background: #6ABA51;
@@ -79,19 +85,20 @@ margin-top: 75px;
 	color: #fff;
 	font-size:24px;
 }
+
 #hp-optin-top{
 
-	background-image: -ms-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
-	background-image: -moz-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
-	background-image: -o-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
-	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(60, #A5D28C), color-stop(100, #0B401F));
-	background-image: -webkit-linear-gradient(top left, #A5D28C 60%, #0B401F 100%);
-	background-image: linear-gradient(to bottom right, #A5D28C 60%, #0B401F 100%);
+	background:url('assets/images/bottom-optin-bg.png') 50% 50% no-repeat;
+    background-size: cover;
 	min-height: 350px;
 	color: #ffffff;
 	padding:25px 0;
 	border-top: solid 3px #0B401F;
 
+}
+.home ol{
+    padding-left: 0;
+    margin-left: 15px;
 }
 /*pages */
 .top-page{
@@ -148,7 +155,7 @@ margin-top: 75px;
     color: #000;
 }
 #primary{
-	margin: 50px 0;
+	margin: 50px 0 0 0;
 }
 #primary ul{
 	margin-left: 0px;
@@ -165,6 +172,7 @@ margin-top: 75px;
     margin-bottom: 50px;
     position: relative;
 }
+.hp-btn,
 .top-optin-btn-wrap .btn{
 
     padding: 10px 20px;
@@ -174,10 +182,12 @@ margin-top: 75px;
     font-weight: 500;
     border-radius: 0;
 }
+.hp-quote-btn,
 .top-optin-btn-wrap a.quote-btn {
     background: #164626;
     border-color: #164626;
 }
+.hp-book-btn,
 .top-optin-btn-wrap a.book-btn{
     background: #ffffff;
     border-color: #164626;
@@ -209,13 +219,28 @@ margin-top: 75px;
 }
 .service-card a h3.card-title{
 	text-decoration: none;
-	color: #0b401f;
+	/*color: #0b401f;*/
+    position: absolute;
+    top: 25px;
+    color: #ffffff;
+    text-transform: capitalize;
+    padding-left: 5px;
 }
 .service-card a:hover{
 	text-decoration: none;
 }
 .service-card a:hover h3.card-title{
-	color: #A5D28C;
+	color: #164626;
+}
+.service-card a .overlay{
+    position: absolute;
+    top:0;
+    width:90%;
+    height:100%;
+    background:rgba(22, 70, 38, 0.6);
+}
+.service-card a:hover .overlay{
+    background:rgba(165, 210, 140, 0.6);
 }
 #bottom-optin{
 	background: url('assets/images/bottom-optin-bg.png') 50% 50% no-repeat;
@@ -231,6 +256,10 @@ margin-top: 75px;
 }
 #benefits .benefit-title-wrap{
     text-align: left;
+}
+.benefit-title{
+    font-weight: 500;
+    text-transform: capitalize;
 }
 /* =============
             FAQ PAGE
@@ -248,13 +277,15 @@ margin-top: 75px;
     background-size: cover;
     min-height:350px;
 }
+.blog article{
+    min-height:300px;
+}
 
 
 
-
-/* =============
-            VIDEO PAGE
-            ===================*/
+    /* =============
+                VIDEO PAGE
+                ===================*/
 
 .video-warp h4.video-title{
 
@@ -270,7 +301,24 @@ margin-top: 75px;
     font-size: 12px;
 	color: #0B401F;
 }
+/*=======
+        Footer
+        =============*/
+footer{
+    background:url('assets/images/bottom-optin-bg.png') 50% 50% no-repeat;
+    background-size: cover;
+    min-height: 150px;
+    color: #ffffff;
+    padding:25px 0;
+    border-top: solid 3px #0B401F;
+}
+#bottom-navigation{
+    position: inherit;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
 
+}
 /*Media Queries*/
 @media (min-width: 0) {
 	.navbar-toggle {

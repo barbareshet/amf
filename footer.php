@@ -14,10 +14,10 @@ get_template_part('template-parts/content', 'testimonials');
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer container" role="contentinfo">
+	<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
 		<?php get_template_part('template-parts/globals/content','bottom-nav-page');?>
         <div class="container">
-            <div class="row">
+            <div class="row-fluid">
                 <div class="col-md-3" id="footer-widget-1">
                     <?php if(is_active_sidebar('footer-1')){
                         dynamic_sidebar('footer-1');

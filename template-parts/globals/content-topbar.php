@@ -11,7 +11,7 @@
 ?>
 
 <div class="container-fluid" id="topbar">
-    <div class="row">
+    <div class="row-fluid">
         <div class="col-md-3 col-sm-12 logo">
                 <?php $logo = get_field('site_logo_big', 'options')?>
             <a class="topbar-brand" href="<?php echo home_url('/'); ?>">

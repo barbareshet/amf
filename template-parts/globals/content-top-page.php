@@ -3,7 +3,7 @@ $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 $thumbnail_url = get_field('top_image_link');
 $page_title = get_post_meta($post->ID,'page title', true);
 if (has_post_thumbnail() ){//check for feature image?>
-    <section class="top-page feature-image" style="background:url('<?php the_post_thumbnail_url("top-image-pages");?>') 50% 50% no-repeat; background-size: cover;">
+    <section class="top-page feature-image" style="background:url('<?php the_post_thumbnail_url('top-image-pages');?>') 50% 50% no-repeat; background-size: cover;">
         <?php get_template_part('template-parts/globals/content', 'topbar');?>
         <div class="container">
             <div class="row">
