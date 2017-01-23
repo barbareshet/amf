@@ -24,4 +24,5 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
+    <button type="button" class="navbar-toggle menu-text" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">Menu</button>
 </div>

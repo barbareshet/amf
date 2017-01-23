@@ -14,6 +14,7 @@ Tags:
 
 html, body {
 	height: 100%;
+    font-size:16px;
 }
 
 body {
@@ -53,6 +54,21 @@ body {
 	font-size: 18px;
 	color: #fff;
 	font-weight:500;
+}
+li.menu-gap {
+    padding: 15px 0;
+}
+li.menu-gap a{
+    display: none;
+}
+li.menu-quote-btn{
+    background: #164626;
+    border-color: #164626;
+}
+li.menu-quote-btn a,
+li.menu-quote-btn:hover a{
+    color: #ffffff;
+    text-transform: uppercase;
 }
 .navbar-default .navbar-toggle{
 	border:none;
@@ -103,13 +119,27 @@ margin-top: 75px;
 /*pages */
 .top-page{
 	height: 500px;
-
+}
+.top-page .top-page-overlay{
+    position: absolute;
+    top: 0;
+    height: 535px;
+    width: 100%;
+    background: rgba(0,0,0,0.45);
+    left: 0;
 }
 .top-page-title-wrap{
 	text-align: center;
 	
 }
-.top-page-title-wrap .page-title{
+.top-page-title-wrap .page-title,
+.top-page-title-wrap h1{
+    text-transform: capitalize;
+    font-size:72px;
+}
+.top-page-title-wrap .page-title,
+.top-page-title-wrap h1,
+.secondary-title{
 	color: #ffffff;
 }
 /*topbar*/
@@ -124,6 +154,17 @@ margin-top: 75px;
 }
 #nav-btn button.navbar-toggle{
     left: 35px;
+}
+#nav-btn button.navbar-toggle.menu-text{
+    font-size:14px;
+    position: absolute;
+    left: 90px;
+    top: 0;
+    color: #a5d28c;
+    border: 1px solid #a5d28c;
+    padding: 5px;
+    text-align: center;
+    border-radius: 0;
 }
 .logo .topbar-brand img{
 	width: 50%;
@@ -193,6 +234,15 @@ margin-top: 75px;
     border-color: #164626;
     color: #164626;
 }
+.hp-quote-btn:hover{
+    background: #A5D28C;
+    border-color: #164626;
+}
+.hp-book-btn:hover{
+    background: #A5D28C;
+    border-color: #164626;
+    color: #164626;
+}
 .top-optin-btn-wrap a.quote-btn:hover,
 .top-optin-btn-wrap a.book-btn:hover{
     background: #A5D28C;
@@ -201,7 +251,7 @@ margin-top: 75px;
 }
 #primary p,
 #primary a{
-	font-size:16px;
+	/*font-size:1.4em;*/
 }
 .section-title-wrap{
 	text-align: center;
@@ -209,6 +259,7 @@ margin-top: 75px;
 .section-title{
 	font-size: 2.1em;
 	font-weight: 600;
+    text-transform: capitalize;
 }
 .service-card{
 	border:none;
@@ -243,9 +294,9 @@ margin-top: 75px;
     background:rgba(165, 210, 140, 0.6);
 }
 #bottom-optin{
-	background: url('assets/images/bottom-optin-bg.png') 50% 50% no-repeat;
+	background: url('assets/images/optin-bottom-bg.jpg') 50% 50% no-repeat;
 	background-size: cover;
-	height: 450px;
+	height: 350px;
 	padding: 20px 40px;
 }
 /*==============
@@ -304,7 +355,7 @@ margin-top: 75px;
 /*=======
         Footer
         =============*/
-footer{
+footer.site-footer{
     background:url('assets/images/bottom-optin-bg.png') 50% 50% no-repeat;
     background-size: cover;
     min-height: 150px;
@@ -317,7 +368,11 @@ footer{
     min-height: 50px;
     margin-bottom: 20px;
     border: 1px solid transparent;
+    color: #ffffff;
 
+}
+#bottom-navigation a{
+    color: #ffffff;
 }
 /*Media Queries*/
 @media (min-width: 0) {

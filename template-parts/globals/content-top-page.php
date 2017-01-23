@@ -6,6 +6,7 @@ if (has_post_thumbnail() ){//check for feature image?>
     <section class="top-page feature-image" style="background:url('<?php the_post_thumbnail_url('top-image-pages');?>') 50% 50% no-repeat; background-size: cover;">
         <?php get_template_part('template-parts/globals/content', 'topbar');?>
         <div class="container">
+            <div class="top-page-overlay"></div>
             <div class="row">
                 <div class="col-sm-12 top-page-title-wrap">
                     <?php
@@ -36,6 +37,7 @@ if (has_post_thumbnail() ){//check for feature image?>
     <section class="top-page feature-image-default" style="background:url('<?php the_post_thumbnail_url("top-image-pages");?>') 50% 50% no-repeat; background-size: cover;">
         <?php get_template_part('template-parts/globals/content', 'topbar');?>
         <div class="container">
+            <div class="top-page-overlay"></div>
             <div class="row">
                 <div class="col-sm-12 top-page-title-wrap">
                     <?php
