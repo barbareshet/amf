@@ -352,6 +352,31 @@ margin-top: 75px;
     font-size: 12px;
 	color: #0B401F;
 }
+/* =============
+                Gallery PAGE
+                ===================*/
+.grid{
+    /*max-width: 1200px;*/
+}
+/* clearfix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-item {
+    width: 160px;
+    height: 120px;
+    float: left;
+
+}
+.grid-item--width2 { width: 320px; height: auto;}
+.grid-item--width3 { width: 480px; height: auto;}
+.grid-item--width4 { width: 640px; height: auto;}
+.grid-item--height2 { height: 200px; width: auto;}
+.grid-item--height3 { height: 260px; width: auto;}
+.grid-item--height4 { height: 360px; width: auto;}
 /*=======
         Footer
         =============*/

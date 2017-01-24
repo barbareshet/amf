@@ -184,7 +184,8 @@ function amf_scripts() {
 	wp_enqueue_script('amf-jasny-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/jasny-bootstrap.min.js', array('jquery'), microtime(), true);
 	//readmore.js
     wp_enqueue_script('amf-readmore-script', get_stylesheet_directory_uri() . '/assets/js/readmore.min.js', array('jquery'), microtime(), true);
-
+    // masonry.js
+    wp_enqueue_script('amf-masonry-script', get_stylesheet_directory_uri() . '/assets/js/masonry.min.js', array('jquery'), microtime(), true);
     //ajax-pagination
     wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/assets/js/ajax-pagination.js', array( 'jquery' ), microtime(), true );
     global $wp_query;
@@ -338,3 +339,86 @@ function my_image_size_override() {
 
 add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
 add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
+
+
+//gallery changes
+add_filter('post_gallery', 'ct_post_gallery', 10, 2);
+function ct_post_gallery($output, $attr) {
+    global $post;
+
+    if (isset($attr['orderby'])) {
+        $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+        if (!$attr['orderby'])
+            unset($attr['orderby']);
+    }
+
+    extract(shortcode_atts(array(
+        'order' => 'ASC',
+        'orderby' => 'menu_order ID',
+        'id' => $post->ID,
+        'itemtag' => 'dl',
+        'icontag' => 'dt',
+        'captiontag' => 'dd',
+        'columns' => 3,
+        'size' => 'medium',
+        'include' => '',
+        'exclude' => ''
+    ), $attr));
+
+    $id = intval($id);
+    if ('RAND' == $order) $orderby = 'none';
+
+    if (!empty($include)) {
+        $include = preg_replace('/[^0-9,]+/', '', $include);
+        $_attachments = get_posts(array(
+            'include' => $include,
+            'post_status' => 'inherit',
+            'post_type' => 'attachment',
+            'post_mime_type' => 'image',
+            'order' => $order,
+            'orderby' => $orderby));
+
+        $attachments = array();
+        $count = 1;
+        foreach ($_attachments as $key => $val) {
+            $attachments[$val->ID] = $_attachments[$key];
+        }
+    }
+
+    if (empty($attachments)) return '';
+
+    // Here's your actual output, you may customize it to your need
+    $output = "<div class=\"grid\">\n";
+//    $output .= "<div class=\"preloader\"></div>\n";
+//    $output .= "<ul data-orbit>\n";
+
+    // Now you loop through each attachment
+    foreach ($attachments as $id => $attachment) {
+        $count++;
+
+//        $sizer = '';
+//        if($count == 1){
+//            $sizer = 'grid-sizer';
+//        }
+        $dim = 'grid-item--width';
+        if($count % 2 == 0){
+            $dim = 'grid-item--height';
+//            return $dim;
+        }
+        if($count==5){ $count=1; }
+        // Fetch the thumbnail (or full image, it's up to you)
+      $img = wp_get_attachment_image_src($id, 'medium');
+//      $img = wp_get_attachment_image_src($id, 'my-custom-image-size');
+        $img = wp_get_attachment_image_src($id, 'full');
+
+        $output .= "<div>\n";
+        $output .= "<img src=\"{$img[0]}\" alt=\"\" class=\"grid-item {$dim}{$count}\"/>\n";
+        $output .= "</div>\n";
+    }
+
+//    $output .= "</ul>\n";
+
+    $output .= "</div>\n";
+
+    return $output;
+}
