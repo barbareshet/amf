@@ -175,9 +175,12 @@ function amf_scripts() {
 
 	//fontawesome
 	wp_enqueue_style('amf-fontawesome', get_stylesheet_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', [], microtime());
+	//photo-gallery-effects-styles
+    wp_enqueue_style('amf-pg-component', get_stylesheet_directory_uri() . '/assets/css/component.css', [], microtime());
 	wp_enqueue_style( 'amf-style', get_stylesheet_uri() );
 
-
+    //modernizer
+    wp_enqueue_script('amf-modernizer-script', get_stylesheet_directory_uri() . '/assets/js/modernizr.custom.js', array('jquery'), microtime(), false);
 	//bootstrap scripts
 	wp_enqueue_script('amf-bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), microtime(), true);
 	//jasny-bootstrap
@@ -185,7 +188,10 @@ function amf_scripts() {
 	//readmore.js
     wp_enqueue_script('amf-readmore-script', get_stylesheet_directory_uri() . '/assets/js/readmore.min.js', array('jquery'), microtime(), true);
     // masonry.js
-    wp_enqueue_script('amf-masonry-script', get_stylesheet_directory_uri() . '/assets/js/masonry.min.js', array('jquery'), microtime(), true);
+    wp_enqueue_script('amf-masonry-script', get_stylesheet_directory_uri() . '/assets/js/masonry.pkgd.min.js', array('jquery'), microtime(), true);
+    wp_enqueue_script('amf-imagesloaded-script', get_stylesheet_directory_uri() . '/assets/js/imagesloaded.js', array('jquery'), microtime(), true);
+    wp_enqueue_script('amf-classie-script', get_stylesheet_directory_uri() . '/assets/js/classie.js', array('jquery'), microtime(), true);
+    wp_enqueue_script('amf-AnimOnScroll-script', get_stylesheet_directory_uri() . '/assets/js/AnimOnScroll.js', array('jquery'), microtime(), true);
     //ajax-pagination
     wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/assets/js/ajax-pagination.js', array( 'jquery' ), microtime(), true );
     global $wp_query;
@@ -342,83 +348,83 @@ add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );
 
 
 //gallery changes
-add_filter('post_gallery', 'ct_post_gallery', 10, 2);
-function ct_post_gallery($output, $attr) {
-    global $post;
-
-    if (isset($attr['orderby'])) {
-        $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
-        if (!$attr['orderby'])
-            unset($attr['orderby']);
-    }
-
-    extract(shortcode_atts(array(
-        'order' => 'ASC',
-        'orderby' => 'menu_order ID',
-        'id' => $post->ID,
-        'itemtag' => 'dl',
-        'icontag' => 'dt',
-        'captiontag' => 'dd',
-        'columns' => 3,
-        'size' => 'medium',
-        'include' => '',
-        'exclude' => ''
-    ), $attr));
-
-    $id = intval($id);
-    if ('RAND' == $order) $orderby = 'none';
-
-    if (!empty($include)) {
-        $include = preg_replace('/[^0-9,]+/', '', $include);
-        $_attachments = get_posts(array(
-            'include' => $include,
-            'post_status' => 'inherit',
-            'post_type' => 'attachment',
-            'post_mime_type' => 'image',
-            'order' => $order,
-            'orderby' => $orderby));
-
-        $attachments = array();
-        $count = 1;
-        foreach ($_attachments as $key => $val) {
-            $attachments[$val->ID] = $_attachments[$key];
-        }
-    }
-
-    if (empty($attachments)) return '';
-
-    // Here's your actual output, you may customize it to your need
-    $output = "<div class=\"grid\">\n";
-//    $output .= "<div class=\"preloader\"></div>\n";
-//    $output .= "<ul data-orbit>\n";
-
-    // Now you loop through each attachment
-    foreach ($attachments as $id => $attachment) {
-        $count++;
-
-//        $sizer = '';
-//        if($count == 1){
-//            $sizer = 'grid-sizer';
+//add_filter('post_gallery', 'ct_post_gallery', 10, 2);
+//function ct_post_gallery($output, $attr) {
+//    global $post;
+//
+//    if (isset($attr['orderby'])) {
+//        $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+//        if (!$attr['orderby'])
+//            unset($attr['orderby']);
+//    }
+//
+//    extract(shortcode_atts(array(
+//        'order' => 'ASC',
+//        'orderby' => 'menu_order ID',
+//        'id' => $post->ID,
+//        'itemtag' => 'dl',
+//        'icontag' => 'dt',
+//        'captiontag' => 'dd',
+//        'columns' => 3,
+//        'size' => 'medium',
+//        'include' => '',
+//        'exclude' => ''
+//    ), $attr));
+//
+//    $id = intval($id);
+//    if ('RAND' == $order) $orderby = 'none';
+//
+//    if (!empty($include)) {
+//        $include = preg_replace('/[^0-9,]+/', '', $include);
+//        $_attachments = get_posts(array(
+//            'include' => $include,
+//            'post_status' => 'inherit',
+//            'post_type' => 'attachment',
+//            'post_mime_type' => 'image',
+//            'order' => $order,
+//            'orderby' => $orderby));
+//
+//        $attachments = array();
+//        $count = 1;
+//        foreach ($_attachments as $key => $val) {
+//            $attachments[$val->ID] = $_attachments[$key];
 //        }
-        $dim = 'grid-item--width';
-        if($count % 2 == 0){
-            $dim = 'grid-item--height';
-//            return $dim;
-        }
-        if($count==5){ $count=1; }
-        // Fetch the thumbnail (or full image, it's up to you)
-      $img = wp_get_attachment_image_src($id, 'medium');
-//      $img = wp_get_attachment_image_src($id, 'my-custom-image-size');
-        $img = wp_get_attachment_image_src($id, 'full');
-
-        $output .= "<div>\n";
-        $output .= "<img src=\"{$img[0]}\" alt=\"\" class=\"grid-item {$dim}{$count}\"/>\n";
-        $output .= "</div>\n";
-    }
-
-//    $output .= "</ul>\n";
-
-    $output .= "</div>\n";
-
-    return $output;
-}
+//    }
+//
+//    if (empty($attachments)) return '';
+//
+//    // Here's your actual output, you may customize it to your need
+//    $output = "<div class=\"grid\">\n";
+////    $output .= "<div class=\"preloader\"></div>\n";
+////    $output .= "<ul data-orbit>\n";
+//
+//    // Now you loop through each attachment
+//    foreach ($attachments as $id => $attachment) {
+//        $count++;
+//
+////        $sizer = '';
+////        if($count == 1){
+////            $sizer = 'grid-sizer';
+////        }
+//        $dim = 'grid-item--width';
+//        if($count % 2 == 0){
+//            $dim = 'grid-item--height';
+////            return $dim;
+//        }
+//        if($count==5){ $count=1; }
+//        // Fetch the thumbnail (or full image, it's up to you)
+//      $img = wp_get_attachment_image_src($id, 'medium');
+////      $img = wp_get_attachment_image_src($id, 'my-custom-image-size');
+//        $img = wp_get_attachment_image_src($id, 'full');
+//
+//        $output .= "<div>\n";
+//        $output .= "<img src=\"{$img[0]}\" alt=\"\" class=\"grid-item {$dim}{$count}\"/>\n";
+//        $output .= "</div>\n";
+//    }
+//
+////    $output .= "</ul>\n";
+//
+//    $output .= "</div>\n";
+//
+//    return $output;
+//}

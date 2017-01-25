@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying videos
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -10,16 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-<!--	<header class="entry-header col-sm-12">-->
-<!--		--><?php
-//		if ( is_single() ) :
-//			the_title( '<h1 class="entry-title">', '</h1>' );
-//		else :
-//			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-//		endif;
-//
-//        ?>
-<!--	</header><!-- .entry-header -->
+
 
 	<div class="entry-content col-sm-12">
 		<?php
@@ -29,7 +20,6 @@
 
                 <?php
                     $videos = get_field('videos_to_show');
-//                    var_dump($videos);
                 if($videos) :?>
                 <?php foreach ($videos as $video) :?>
                     <div class="col-md-4 col-sm-6 col-xs-12 video-warp panel">

@@ -17,7 +17,7 @@
             },
             "min": "",
             "max": "",
-            "preview_size": "service-image",
+            "preview_size": "full",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -56,5 +56,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1485283537
+    "modified": 1485324341
 }
