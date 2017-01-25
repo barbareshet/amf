@@ -17,16 +17,17 @@
 
         ?>
         <ul class="grid effect-2" id="grid">
-            <?php foreach( $images as $image ):
-//                echo '<pre>';
-//                var_dump($image);
-                ?>
-                <li>
+             <?php foreach( $images as $key => $image ):
+                 $key++;
+                 ?>
+                <li class="image-<?php echo $key ;?>">
                     <a href="<?php echo $image['url']; ?>">
                         <img src="<?php echo $image['sizes']['medium_large']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </a>
                     <p><?php echo $image['caption']; ?></p>
                 </li>
+                <?php
+                 ;?>
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>

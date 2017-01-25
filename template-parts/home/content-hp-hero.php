@@ -7,8 +7,8 @@
 			<div class="col-sm-12 text-center">
 				<h1><?php the_field('hero_title');?></h1>
 			</div>
-			<div class="col-sm-12 secondary">
-				<p><?php the_field('secondary_title');?></p>
+			<div class="col-sm-12">
+				<div class="lead hp-secondary-title"><?php the_field('secondary_title');?></div>
 			</div>
 		</div>
 		<div class="row">

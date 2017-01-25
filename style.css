@@ -37,6 +37,12 @@ body {
     height:600px;
     background: rgba(0,0,0,0.45);
 }
+#hero .lead.hp-secondary-title {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    text-transform: capitalize;
+}
 .navmenu{
 	background: #6ABA51;
 }
@@ -243,6 +249,12 @@ margin-top: 75px;
     border-color: #164626;
     color: #164626;
 }
+.quote-btn-wrap{
+    text-align: right;
+}
+.book-btn-wrap{
+    text-align: left;
+}
 .top-optin-btn-wrap a.quote-btn:hover,
 .top-optin-btn-wrap a.book-btn:hover{
     background: #A5D28C;
@@ -445,6 +457,27 @@ footer.site-footer{
 }
 @media (max-width: 550px) {
 	#topbar .phone-num{
-		text-align: left;
+		text-align: center;
 	}
+    .hp-title-wrapper h1,
+    .top-page-title-wrap h1{
+        font-size: 28px;
+    }
+    #hero .hero-overlay,
+    .top page .top-page-overlay{
+        height:250px;
+        box-sizing: border-box;
+    }
+    .hp-quote-btn,
+    .top-optin-btn-wrap a.quote-btn,
+    .hp-book-btn,
+    .top-optin-btn-wrap a.book-btn{
+        min-width: 1px;
+        font-size: 16px;
+    }
+    .quote-btn-wrap,
+    .book-btn-wrap{
+        text-align: center;
+        width: 200px;
+    }
 }
