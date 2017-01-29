@@ -6,7 +6,12 @@
             </div>
             <div class="col-md-8 col-sm-12 cta-wrap" id="hp-cta">
                 <h3 class="cta-title"><?php the_field('hp_optin_title');?></h3>
-                <p cta-desc> <?php the_field('hp_optin_text');?></p>
+                <div cta-desc> <?php the_field('hp_optin_text');?></div>
+                <div class="cta-btn">
+                    <a href="<?php the_field('hp_optin_link');?>" class="btn btn-success hp-optin-btn">
+                        <?php the_field('hp_optin_btn_text');?>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

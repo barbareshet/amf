@@ -21,6 +21,8 @@
 
                         <h3 class="card-title">
                             <?php echo get_the_title( $service->ID ); ?>
+                            <br>
+                            <i class="fa fa-caret-down service-card-read-more"></i>
                         </h3>
                     </a>
                     <!-- /.overlay -->

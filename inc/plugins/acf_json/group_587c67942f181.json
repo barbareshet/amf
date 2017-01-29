@@ -150,6 +150,13 @@
                 "operator": "==",
                 "value": "services"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "4"
+            }
         ]
     ],
     "menu_order": 2,
@@ -160,5 +167,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1484550026
+    "modified": 1485668400
 }
