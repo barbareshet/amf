@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-	<header class="entry-header col-sm-12">
+	<header class="entry-header col-md-8 col-md-push-2 col-sm-12">
 		<?php
 		if ( is_single() ) :
 			the_title( '<h2 class="entry-title">', '</h2>' );
@@ -21,15 +21,10 @@
         ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content col-sm-9">
+	<div class="entry-content col-md-8 col-md-push-2 col-sm-12">
 		<?php
 			the_field('service_content');
 		?>
 	</div><!-- .entry-content -->
-    <aside class="col-sm-3">
-        <?php get_sidebar();?>
-    </aside>
-<!--	<footer class="entry-footer">-->
-<!--		--><?php //amf_entry_footer(); ?>
-<!--	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->

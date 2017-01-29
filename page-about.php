@@ -66,9 +66,9 @@ get_template_part('template-parts/content', 'page-optin-top');
                                         </h3>
                                     </div>
                                     <div class="col-sm-12 benefit-content">
-                                        <p class="lead benefit-text">
+                                        <div class="lead benefit-text">
                                             <?php the_sub_field('about_benefits_description');?>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

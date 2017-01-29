@@ -194,12 +194,18 @@ margin-top: 75px;
 	font-size:24px;
 	font-weight:bold;
 }
+.logo,
+.phone-num,
+.contact-btns{
+    z-index: 999;
+}
 .comment-btn,
 .contact-btn{
 	background: transparent;
 	border-radius: 0;
-	color: #000000;
+	color: #ffffff;
 	font-weight:400;
+    border-color: #ffffff;
 }
 #topbar .btn{
     border-color: #000;
@@ -304,8 +310,9 @@ margin-top: 75px;
 }
 .section-title{
 	font-size: 2.1em;
-	font-weight: 600;
+	font-weight: 100;
     text-transform: capitalize;
+    color: #164626;
 }
 #hp-services{
     padding-bottom: 50px;
@@ -375,6 +382,10 @@ margin-top: 75px;
 .benefit-title{
     font-weight: 500;
     text-transform: capitalize;
+    color: #164626;
+}
+.benefit-text{
+    text-align: left;
 }
 /* =============
             FAQ PAGE
