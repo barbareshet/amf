@@ -13,7 +13,7 @@
         <div class="row">
             <?php foreach( $services as $service ):
                        ?>
-                <div class="service-card panel panel-default col-md-3 col-sm-6 col-xs-12">
+                <div class="service-card panel panel-default col-md-3 col-sm-6 col-xs-6">
                     <a href="<?php echo get_permalink( $service->ID ); ?>">
                         <?php $photo = get_field('service_image', $service->ID);?>
                         <img src="<?php echo $photo['url']; ?>" alt="" />

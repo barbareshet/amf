@@ -470,19 +470,20 @@ footer.site-footer{
     margin-bottom: 20px;
     border: 1px solid transparent;
     color: #ffffff;
+    background: none;
 
 }
 #bottom-navigation a{
     color: #ffffff;
 }
 /*Media Queries*/
-@media screen and(min-width: 0) {
+@media (min-width: 0) {
 	.navbar-toggle {
 		display: block; /* force showing the toggle */
 	}
 }
 
-@media screen and(min-width: 992px) {
+@media (min-width: 992px) {
 	body {
 		padding: 0;
 	}
@@ -494,7 +495,7 @@ footer.site-footer{
 	}
 
 }
-@media screen and(max-width: 992px) {
+@media (max-width: 992px) {
     #topbar .logo {
         text-align: center;
     }
@@ -519,7 +520,7 @@ footer.site-footer{
         left: 15px;
     }
 }
-@media screen and(max-width: 768px){
+@media (max-width: 768px){
     .navbar-default.navbar-fixed-top {
         background-color: #A5D28C;
         border-color: #e7e7e7;
@@ -543,16 +544,24 @@ footer.site-footer{
     #top-optin .book-btn-wrap{
         width: 50%;
     }
-    .blog article {
+    .blog article{
         min-height: 150px;
     }
     .certificate-img{
         text-align: center;
     }
-
+    footer.site-footer .navbar-default{
+        background: none;
+    }
+    .site-footer .social-links .nav>li,
+    .site-footer .footer-nav .nav>li{
+        position: relative;
+        display: inline-block;
+        float: left;
+    }
 }
-@media screen and(max-width: 550px) {
-    #nav-btn button.navbar-toggle {
+@media (max-width: 550px) {
+    #nav-btn button.navbar-toggle{
         left: 0;
     }
 	#topbar .phone-num{
@@ -643,8 +652,8 @@ footer.site-footer{
     footer.site-footer .navbar-default{
         background: none;
     }
-    footer.site-footer .social-links .nav>li,
-    footer.site-footer .footer-nav .nav>li{
+    .site-footer .social-links .nav>li,
+    .site-footer .footer-nav .nav>li{
         position: relative;
         display: inline-block;
         float: left;
