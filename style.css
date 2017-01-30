@@ -1,6 +1,6 @@
 /*
 Theme Name: amf
-Theme URI: http://underscores.me/
+Theme URI: austinmovingforward.com Based on underscores.me
 Author: Ido Barnea
 Author URI: http://www.barbareshet.co.il
 Description: Austin moving forward theme
@@ -231,7 +231,7 @@ margin-top: 75px;
 	margin: 50px 0 0 0;
 }
 #primary ul{
-	margin-left: 0px;
+	margin-left: 0;
 	padding-left: 15px
 }
 .top-page-optin{
@@ -404,7 +404,7 @@ margin-top: 75px;
     min-height:350px;
 }
 .blog article{
-    min-height:300px;
+    min-height:320px;
 }
 
 
@@ -476,13 +476,13 @@ footer.site-footer{
     color: #ffffff;
 }
 /*Media Queries*/
-@media (min-width: 0) {
+@media screen and(min-width: 0) {
 	.navbar-toggle {
 		display: block; /* force showing the toggle */
 	}
 }
 
-@media (min-width: 992px) {
+@media screen and(min-width: 992px) {
 	body {
 		padding: 0;
 	}
@@ -492,14 +492,44 @@ footer.site-footer{
 		background: none;
 		border: none;
 	}
+
 }
-@media (max-width: 768px){
+@media screen and(max-width: 992px) {
+    #topbar .logo {
+        text-align: center;
+    }
+    .logo .topbar-brand img {
+        width: 25%;
+        height: auto;
+    }
     .navbar-default.navbar-fixed-top {
         background-color: #A5D28C;
         border-color: #e7e7e7;
     }
+    #topbar .phone-num {
+        position: fixed;
+        top: 0;
+        right: 75px;
+        left: 75px;
+        z-index: 99999;
+        margin-top: 10px;
+        text-align: center;
+    }
+    #nav-btn button.navbar-toggle {
+        left: 15px;
+    }
+}
+@media screen and(max-width: 768px){
+    .navbar-default.navbar-fixed-top {
+        background-color: #A5D28C;
+        border-color: #e7e7e7;
+    }
+
     .top-page{
-        height: 250px;
+        height: 350px;
+    }
+    .top-page .top-page-overlay{
+        height: 400px;
     }
     #topbar .logo{
         text-align: center;
@@ -509,28 +539,47 @@ footer.site-footer{
         width: 25%;
         height:auto;
     }
-    #topbar .phone-num{
-        position: fixed;
-        top:0;
-        right: 0;
-        left: 50px;
-        z-index: 99999;
-        margin-top: 10px;
+    #top-optin .quote-btn-wrap,
+    #top-optin .book-btn-wrap{
+        width: 50%;
+    }
+    .blog article {
+        min-height: 150px;
+    }
+    .certificate-img{
         text-align: center;
     }
+
 }
-@media (max-width: 550px) {
+@media screen and(max-width: 550px) {
+    #nav-btn button.navbar-toggle {
+        left: 0;
+    }
 	#topbar .phone-num{
 		text-align: center;
 	}
+    .top-page {
+        height: 350px;
+    }
     .hp-title-wrapper h1,
     .top-page-title-wrap h1{
-        font-size: 28px;
+        font-size: 36px;
+        font-weight: 500;
     }
     #hero .hero-overlay,
-    .top page .top-page-overlay{
-        height:250px;
+    .home .top-page .top-page-overlay{
+        height:100%;
         box-sizing: border-box;
+    }
+    .top-page .top-page-overlay{
+        height:400px;
+    }
+    #topbar .logo{
+        margin-top: 0;
+    }
+    #top-optin .quote-btn-wrap,
+    #top-optin .book-btn-wrap{
+        width: 100%;
     }
     .hp-quote-btn,
     .top-optin-btn-wrap a.quote-btn,
@@ -538,10 +587,78 @@ footer.site-footer{
     .top-optin-btn-wrap a.book-btn{
         min-width: 1px;
         font-size: 16px;
+        width: 250px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .quote-btn-wrap,
     .book-btn-wrap{
         text-align: center;
-        width: 200px;
+        width: 100%;
+    }
+    #topbar .logo a img {
+        width: 75%;
+        height: auto;
+    }
+    .hp-title-wrapper {
+        margin-top: 0;
+    }
+    #hero .lead.hp-secondary-title {
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        text-transform: capitalize;
+    }
+    div#hp-cta {
+        text-align: center;
+    }
+    #hp-cta .cta-title {
+        font-size: 32px;
+    }
+    #hp-cta p {
+        font-size: 22px;
+    }
+    .home #primary header h2{
+        font-size: 32px;
+    }
+    .container.bottom-benefits {
+        text-align: center;
+    }
+    .benefit-text {
+        text-align: center;
+    }
+    #bottom-optin {
+        height: 450px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    #bottom-optin .bottom-optin-content p {
+        text-align: center;
+        font-size: 16px;
+    }
+    #bottom-navigation{
+        background: none;
+    }
+    footer.site-footer .navbar-default{
+        background: none;
+    }
+    footer.site-footer .social-links .nav>li,
+    footer.site-footer .footer-nav .nav>li{
+        position: relative;
+        display: inline-block;
+        float: left;
+    }
+    .top-optin-btn-wrap {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    #primary {
+        margin: 0;
+    }
+    #botom-certificates {
+        padding: 15px 0;
+        text-align: center;
     }
 }

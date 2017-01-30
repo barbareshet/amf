@@ -25,7 +25,7 @@
                             $cert_img = get_sub_field('certificate_img','options');
                             ?>
 
-                            <div class="col-md-3 col-sm-6 col-xs-12 certificate-img">
+                            <div class="col-md-3 col-sm-3 col-xs-6 certificate-img">
                                 <a href="<?php the_sub_field('certificate_link');?>">
                                     <img src="<?php echo $cert_img['url'];?>" alt="<?php echo $cert_img['alt'];?>">
                                 </a>
