@@ -439,8 +439,9 @@ font-size: 24px;
     color: #000;
 }
 .question .panel-title a{
-    font-size:22px;
+    font-size: 1.5em;
     font-weight: 500;
+    line-height: 1.4;
 }
 .question .panel-title a::first-letter,
 .answer .panel-body p::first-letter{
@@ -457,6 +458,12 @@ font-size: 24px;
     font-weight: 500;
     text-align: center;
     font-size: 1.4em;;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #164626;
+}
+.page-template-page-faq hr.divider{
+    border-top: 1px solid #a5d28c;
 }
 /* =============
             BLOG PAGE
@@ -475,7 +482,9 @@ font-size: 24px;
     /* =============
                 VIDEO PAGE
                 ===================*/
-
+.video-warp{
+    box-shadow: none;
+}
 .video-warp h4.video-title{
 
     min-height: 40px;

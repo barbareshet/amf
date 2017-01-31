@@ -24,6 +24,12 @@ get_template_part('template-parts/content', 'page-optin-top');
 		<main id="main" class="site-main" role="main">
 			<div class="container">
 				<div class="row">
+					<div class="col-md-8 col-md-push-2 col-sm-12 text-center">
+						<h3><?php the_field('secondary_title');?></h3>
+					</div><!-- /.col-sm-12 text-center -->
+				</div><!--.row-->
+				<hr class="divider"><!-- /.divider -->
+				<div class="row">
 					<div class="col-md-8 col-md-push-2 col-sm-12">
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							<?php

@@ -19,15 +19,19 @@ if (has_post_thumbnail() ){//check for feature image?>
                         the_title( '<h1 class="entry-title">', '</h1>' );
                     }?>
                     <?php $secondary_title = get_field('secondary_title');
-                        if($secondary_title) :?>
+                        if($secondary_title) {?>
                             <div class="secondary-title lead">
                                 <?php echo $secondary_title;?>
                             </div>
-                     <?php else: ?>
+                     <?php } elseif ($secondary_title = get_post_meta($post->ID, 'secondary title',true)){ ?>
+                            <div class="secondary-title lead">
+                                <?php echo $secondary_title  ;?>
+                            </div>
+                        <?php } else{ ?>
                             <div class="secondary-title lead">
                                 <?php the_field('service_description');?>
                             </div>
-                     <?php endif;?>
+                     <?php }?>
                 </div>
             </div>
         </div>
