@@ -402,7 +402,7 @@
             },
             "collapsed": "field_587e709e34b78",
             "min": "",
-            "max": 3,
+            "max": 4,
             "layout": "block",
             "button_label": "Add Row",
             "sub_fields": [
@@ -592,5 +592,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485672151
+    "modified": 1485871725
 }

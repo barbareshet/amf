@@ -24,6 +24,27 @@
             "disabled": 0
         },
         {
+            "key": "field_5890f46b6e716",
+            "label": "bottom text",
+            "name": "bottom_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_587556f31b829",
             "label": "faq",
             "name": "faq",
@@ -116,5 +137,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1484222334
+    "modified": 1485894838
 }

@@ -67,7 +67,7 @@ body {
 }
 .navmenu ul li.page_item a{
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 20px;
 	color: #fff;
 	font-weight:500;
 }
@@ -256,14 +256,22 @@ margin-top: 75px;
     border-radius: 0;
 }
 .hp-quote-btn,
-.top-optin-btn-wrap a.quote-btn {
+.top-optin-btn-wrap a.quote-btn{
     background: #164626;
     border-color: #164626;
+}
+.hp-quote-btn:visited,
+.top-optin-btn-wrap a.quote-btn:visited{
+    color: #ffffff;
 }
 .hp-book-btn,
 .top-optin-btn-wrap a.book-btn{
     background: #ffffff;
     border-color: #164626;
+    color: #164626;
+}
+.hp-book-btn:visited,
+.top-optin-btn-wrap a.book-btn:visited{
     color: #164626;
 }
 .hp-quote-btn:hover{
@@ -384,17 +392,72 @@ margin-top: 75px;
     text-transform: capitalize;
     color: #164626;
 }
+.container.bottom-benefits {
+    padding: 25px 0;
+}
+.bottom-benefits .benefit{
+    text-align: center;
+}
+.benefit-img {
+    min-height: 120px;
+}
+.bottom-benefits .benefit img{
+    max-width: 100px;
+    height:auto;
+}
 .benefit-text{
-    text-align: left;
+    text-align: center;
+}
+/* =============
+            Top Optin
+            ===================*/
+h2.about-optin-title{
+font-size: 36px;
+font-weight:500;
+}
+.about-optin-text{
+font-size: 24px;
 }
 /* =============
             FAQ PAGE
             ===================*/
+#accordion .panel{
+    margin-bottom: 25px;
+}
+#accordion .panel-default{
+    border-radius:0;
+}
 
-
-
-
-
+.panel-default>.panel-heading {
+    color: #ffffff;
+    background-color:#164626;
+    border-color: #164626;
+}
+.answer{
+    background-color: #a5d28c;
+    border-color: #a5d28c;
+    color: #000;
+}
+.question .panel-title a{
+    font-size:22px;
+    font-weight: 500;
+}
+.question .panel-title a::first-letter,
+.answer .panel-body p::first-letter{
+    font-size: 28px;
+}
+.question .panel-title a:hover{
+    text-decoration: none;
+}
+.panel-body{
+    font-size:18px;
+}
+.faq-bottom-text{
+    padding: 25px 0;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.4em;;
+}
 /* =============
             BLOG PAGE
             ===================*/
@@ -630,12 +693,20 @@ footer.site-footer{
     .home #primary header h2{
         font-size: 32px;
     }
+    h2.about-optin-title{
+        font-size: 20px;
+        font-weight:500;
+    }
     .container.bottom-benefits {
+        text-align: center;
+    }
+    .benefit{
         text-align: center;
     }
     .benefit-text {
         text-align: center;
     }
+
     #bottom-optin {
         height: 450px;
     }

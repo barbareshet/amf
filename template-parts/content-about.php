@@ -19,7 +19,7 @@
 //        }?>
     </header><!-- .entry-header -->
 
-    <div class="entry-content col-sm-12">
+    <div class="entry-content col-md-8 col-md-push-2 col-sm-12">
         <?php
         the_content();
 

@@ -169,14 +169,13 @@ function amf_scripts() {
 	wp_enqueue_style('amf-normalize', get_stylesheet_directory_uri() . '/assets/css/normalize.css', [], microtime());
 	//bootstrap
 	wp_enqueue_style('amf-bootstrap', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', [], microtime());
-
 	//jansy-bootstrap
 	wp_enqueue_style('amf-jansy-bootstrap-style', get_stylesheet_directory_uri() . '/assets/css/jasny-bootstrap.min.css', [], microtime());
-
 	//fontawesome
 	wp_enqueue_style('amf-fontawesome', get_stylesheet_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', [], microtime());
 	//photo-gallery-effects-styles
     wp_enqueue_style('amf-pg-component', get_stylesheet_directory_uri() . '/assets/css/component.css', [], microtime());
+    //main stylesheet
 	wp_enqueue_style( 'amf-style', get_stylesheet_uri() );
 
     //modernizer

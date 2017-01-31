@@ -14,9 +14,9 @@
                 <h2 class="about-optin-title">
                     <?php the_field('optin_title');?>
                 </h2>
-                <p class="about-optin-text">
+                <div class="lead about-optin-text">
                     <?php the_field('optin_desc');?>
-                </p>
+                </div>
             </div>
         </div>
         <div class="row top-optin-btn-wrap">
