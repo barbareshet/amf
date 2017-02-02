@@ -43,7 +43,8 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-hidden" id="truck-bg">
-
+                <?php $bottom_optin_truck = get_field('bottom_optin_truck', 'options');?>
+                <img src="<?php echo $bottom_optin_truck['url'];?>" alt="<?php echo $bottom_optin_truck['alt'];?>">
             </div>
         </div>
     </div>

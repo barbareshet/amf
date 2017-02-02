@@ -378,6 +378,12 @@ margin-top: 75px;
 #botom-certificates{
     padding: 75px 0;
 }
+#truck-bg img{
+    position: absolute;
+    right: -90px;
+    top: -200px;
+    max-width: 200%;
+}
 /*==============
             About Us
             ====================*/
@@ -590,6 +596,9 @@ footer.site-footer{
     }
     #nav-btn button.navbar-toggle {
         left: 15px;
+    }
+    #truck-bg img{
+        display: none;
     }
 }
 @media (max-width: 768px){
