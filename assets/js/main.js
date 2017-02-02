@@ -68,6 +68,19 @@
         });
     });
 
+    //LightBox
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+            alwaysShowClose: true,
+            showArrows: true
+        });
+    });
+})(jQuery);
+(function($){
+    var baseUrl = 'http://amf.dev';
+    var logoPath = baseUrl + '/wp-content/themes/assets/images/logo_small.png';
+    $('.modal-header').find('.modal-title').append('This is Modal Title');
 
 })(jQuery);
 

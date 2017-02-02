@@ -175,6 +175,8 @@ function amf_scripts() {
 	wp_enqueue_style('amf-fontawesome', get_stylesheet_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', [], microtime());
 	//photo-gallery-effects-styles
     wp_enqueue_style('amf-pg-component', get_stylesheet_directory_uri() . '/assets/css/component.css', [], microtime());
+    //lightbox
+    wp_enqueue_style('amf-lightbox-styles', get_stylesheet_directory_uri() . '/assets/css/ekko-lightbox.min.css', [], microtime());
     //main stylesheet
 	wp_enqueue_style( 'amf-style', get_stylesheet_uri() );
 
@@ -191,6 +193,9 @@ function amf_scripts() {
     wp_enqueue_script('amf-imagesloaded-script', get_stylesheet_directory_uri() . '/assets/js/imagesloaded.js', array('jquery'), microtime(), true);
     wp_enqueue_script('amf-classie-script', get_stylesheet_directory_uri() . '/assets/js/classie.js', array('jquery'), microtime(), true);
     wp_enqueue_script('amf-AnimOnScroll-script', get_stylesheet_directory_uri() . '/assets/js/AnimOnScroll.js', array('jquery'), microtime(), true);
+    //lightbox
+    wp_enqueue_script('amf-lightbox-script', get_stylesheet_directory_uri() . '/assets/js/ekko-lightbox.min.js', array('jquery'), microtime(), true);
+
     //ajax-pagination
     wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/assets/js/ajax-pagination.js', array( 'jquery' ), microtime(), true );
     global $wp_query;
@@ -231,7 +236,7 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
+require get_template_directory() . '/inc/barbareshet_customizer.php';
 /**
  * Load Jetpack compatibility file.
  */

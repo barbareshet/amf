@@ -554,6 +554,18 @@ footer.site-footer{
 #bottom-navigation a{
     color: #ffffff;
 }
+#schema .footer-list{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+#schema .footer-social-icons .fa{
+    background: #fff;
+    width:32px;
+    height:32px;
+    text-align: center;
+    padding: 5px;
+}
 /*Media Queries*/
 @media (min-width: 0) {
 	.navbar-toggle {

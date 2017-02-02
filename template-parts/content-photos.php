@@ -21,7 +21,7 @@
                  $key++;
                  ?>
                 <li class="image-<?php echo $key ;?>">
-                    <a href="<?php echo $image['url']; ?>">
+                    <a href="<?php echo $image['url']; ?>"  data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                         <img src="<?php echo $image['sizes']['medium_large']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </a>
                     <p><?php echo $image['caption']; ?></p>
