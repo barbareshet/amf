@@ -215,7 +215,12 @@ margin-top: 75px;
     color: #000000;
 }
 #topbar .btn:visited{
-    color: #000;
+    color: #ffffff;
+}
+#topbar .comment-btn,
+#topbar .contact-btn{
+    border-color: #ffffff;
+    text-transform: uppercase;
 }
 #hp-cta .cta-title{
     font-size: 52px;
@@ -266,8 +271,8 @@ margin-top: 75px;
 }
 .hp-book-btn,
 .top-optin-btn-wrap a.book-btn{
-    background: #ffffff;
-    border-color: #164626;
+    background: #A5D28C;
+    border-color: #A5D28C;
     color: #164626;
 }
 .hp-book-btn:visited,
@@ -412,7 +417,7 @@ margin-top: 75px;
     height:auto;
 }
 .benefit-text{
-    text-align: center;
+    text-align: left;
 }
 /* =============
             Top Optin
@@ -474,6 +479,9 @@ font-size: 24px;
 /* =============
             BLOG PAGE
             ===================*/
+.blog .top-page{
+    background: url("assets/img/blog.jpg") no-repeat top center;
+}
 .feature-image-default{
     background: url("assets/img/blog.jpg") no-repeat top center;
     background-size: cover;
@@ -540,7 +548,7 @@ footer.site-footer{
     color: #ffffff;
     padding:25px 0;
     border-top: solid 3px #0B401F;
-    height: 300px;
+    min-height: 300px;
 }
 #bottom-navigation{
     position: inherit;
@@ -555,16 +563,9 @@ footer.site-footer{
     color: #ffffff;
 }
 #schema .footer-list{
-    list-style-type: none;
     padding-left: 0;
-    margin-left: 0;
-}
-#schema .footer-social-icons .fa{
-    background: #fff;
-    width:32px;
-    height:32px;
-    text-align: center;
-    padding: 5px;
+    margin-left:0 ;
+    list-style-type: none;
 }
 /*Media Queries*/
 @media (min-width: 0) {

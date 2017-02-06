@@ -1,9 +1,14 @@
 <?php
 $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 $thumbnail_url = get_field('top_image_link');
-$page_title = get_post_meta($post->ID,'page title', true);
+$page_title = get_post_meta($post->ID,'page_title', true);
 if (has_post_thumbnail() ){//check for feature image?>
-    <section class="top-page feature-image" style="background:url('<?php the_post_thumbnail_url('top-image-pages');?>') 50% 50% no-repeat; background-size: cover;">
+    <section class="top-page feature-image"
+             <?php if(! is_home()):;?>
+             style="background:url('<?php the_post_thumbnail_url('top-image-pages');?>') 50% 50% no-repeat; background-size: cover;">
+        <?php else:?>
+                >
+        <?php endif;?>
         <?php get_template_part('template-parts/globals/content', 'topbar');?>
         <div class="container">
             <div class="top-page-overlay"></div>
@@ -13,10 +18,9 @@ if (has_post_thumbnail() ){//check for feature image?>
                     if($page_title){
                         echo "<h1>{$page_title}</h1>";
                     } elseif(is_singular('services') && $page_title = get_field('service_name')){
-
                         echo "<h1 class='entry-title'>{$page_title}</h1>";
                     }else{
-                        the_title( '<h1 class="entry-title">', '</h1>' );
+                        single_post_title( '<h1 class="entry-title">', '</h1>' );
                     }?>
                     <?php $secondary_title = get_field('secondary_title');
                         if($secondary_title) {?>

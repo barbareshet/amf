@@ -22,10 +22,9 @@
                 if($videos) :?>
                 <?php foreach ($videos as $video) :?>
                     <div class="col-md-4 col-sm-6 col-xs-12 video-warp panel">
-                        <a href="https://www.youtube.com/embed/<?php the_field('video_url', $video->ID); ?>" data-toggle="lightbox" data-width="1280" data-gallery="youtubevideos" role="dialog" aria-labelledby="<?php the_field('video_title', $video->ID); ?>">
+                        <a href="<?php echo get_the_permalink($video->ID);?>">
                             <div class="video-wrap">
-Video <?php echo $video->ID;?>
-                                <!--                                <iframe width="400" height="225" src="https://www.youtube.com/embed/--><?php //the_field('video_url', $video->ID); ?><!--"?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>-->
+                                <iframe width="400" height="225" src="https://www.youtube.com/embed/<?php the_field('video_url', $video->ID); ?>"?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
                             </div>
                            <h4 class="video-title">
                                <?php the_field('video_title', $video->ID); ?>
