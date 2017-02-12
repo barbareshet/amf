@@ -10,8 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-	<div class="col-md-6 col sm-12 contact-form-wrap">
-		<header class="entry-header entry-title">
+	<div class="col-md-8 col-md-offset-2 col sm-12 comment-form-wrap">
+		<header class="entry-header text-center">
 
 			<?php
 			if($page_title){
@@ -23,18 +23,14 @@
 		<div class="contact-form">
 
 			<?php the_content();?>
-
+            
             <!-- /.row -->
 		</div>
 		<!-- /.contact-form -->
 	</div>
-	<!-- /.col-md-6 col sm-12 contact-form -->
+	<!-- /.comment-form-wrap -->
 
-	<div class="entry-content col-md-6 col-sm-12 map-info">
 
-			<?php the_field('company_location','options');?>
-
-	</div><!-- .entry-content -->
 
 
 </article><!-- #post-## -->

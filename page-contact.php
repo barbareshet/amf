@@ -23,8 +23,12 @@ get_template_part('template-parts/content', 'page-optin-top');
 
 			<?php
 			while ( have_posts() ) : the_post();
+					if(is_page('contact')){
 
-				get_template_part( 'template-parts/content', 'contact' );
+						get_template_part( 'template-parts/content', 'contact' );
+					}else{
+						get_template_part( 'template-parts/content', 'comments' );
+					}
 
 
 
