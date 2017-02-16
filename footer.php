@@ -49,12 +49,12 @@ get_template_part('template-parts/content', 'testimonials');
                     ?>
                 </div>
             </div><!--/.row-->
+            <div class="site-info row" style="text-align: center;">
+                <?php printf( esc_html__( 'All Right Reserved %1$s', 'amf' ), '&copy;' ); ?>
+                <span class="sep"> | </span>
+                <?php printf( esc_html__( '%s | %2$s.', 'amf' ), date('Y'), get_bloginfo('name') ); ?>
+            </div><!-- .site-info -->
         </div><!--/.container-->
-		<div class="site-info container" style="text-align: center;">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amf' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'amf' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'amf' ), 'amf', '<a href="https://automattic.com/" rel="designer">Ido Barnea</a>' ); ?>
-		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
