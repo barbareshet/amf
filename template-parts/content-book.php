@@ -14,11 +14,11 @@
 		<header class="entry-header entry-title">
 
 			<?php
-			if($page_title){
-				echo "<h2>{$page_title}</h2>";
-			} else{
-				the_title( '<h2 class="entry-title">', '</h2>' );
-			}?>
+//			if($page_title){
+//				echo "<h2>{$page_title}</h2>";
+//			} else{
+//				the_title( '<h2 class="entry-title">', '</h2>' );
+//			}?>
 		</header><!-- .entry-header -->
 		<?php the_content();?>
     </div><!-- /.sm-12 contact-form -->

@@ -15,7 +15,7 @@
  */
 get_header();
 get_template_part('template-parts/globals/content', 'top-page');
-get_template_part('template-parts/content', 'page-optin-top');
+//get_template_part('template-parts/content', 'page-optin-top');
 ?>
 
 	<div id="primary" class="content-area section">
