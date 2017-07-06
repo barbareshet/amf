@@ -272,69 +272,6 @@
             "disabled": 0
         },
         {
-            "key": "field_58a0b2085b27c",
-            "label": "company yelp",
-            "name": "company_yelp",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_58a0b2205b27d",
-            "label": "company bbb",
-            "name": "company_bbb",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_58a0b2335b27e",
-            "label": "company angies list",
-            "name": "company_angies_list",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
             "key": "field_587c676319626",
             "label": "Topbar Section",
             "name": "topbar_section",
@@ -638,10 +575,10 @@
             ]
         },
         {
-            "key": "field_58939af29ebc2",
-            "label": "bottom optin truck",
-            "name": "bottom_optin_truck",
-            "type": "image",
+            "key": "field_58b4fc9e39c82",
+            "label": "leagal numbers",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -650,16 +587,71 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58b4fcbb39c83",
+            "label": "us dot",
+            "name": "us_dot",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2418048,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58b4fcca39c84",
+            "label": "icc mc",
+            "name": "icc_mc",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 948102,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58b4fcd939c85",
+            "label": "txdmv",
+            "name": "txdmv",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "006739586c",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -679,5 +671,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1486926398
+    "modified": 1488256625
 }

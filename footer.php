@@ -57,7 +57,7 @@ get_template_part('template-parts/content', 'testimonials');
         </div><!--/.container-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<a href="#header" class="scrollup" style="display: block;"><i class="fa fa-chevron-up"></i></a>
 <?php wp_footer(); ?>
 <script>
     new AnimOnScroll( document.getElementById( 'grid' ), {

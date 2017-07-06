@@ -15,7 +15,7 @@
                 <div class="footer-logo">
                     <a itemprop="url" href="<?php echo get_home_url(); ?>" alt="<?php echo get_bloginfo('name'); ?>"  title="<?php echo get_bloginfo('name'); ?>">
                         <span itemprop="logo" itemtype="https://schema.org/ImageObject">
-                            <img src="<?php echo get_theme_mod('schema_logo', get_template_directory_uri() . '/assets/img/logo_small.png') ;?>" alt="<?php echo get_bloginfo('name'); ?>" itemprop="image">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/logo_small.png' ;?>" alt="<?php echo get_bloginfo('name'); ?>" itemprop="image">
                         </span>
                     </a>
                 </div>
@@ -44,14 +44,25 @@
 
                 </div>
             </li>
-
+            <li class="inline-block">
+                <div class="footer-hours"><i class="fa fa-clock-o">&nbsp</i>
+                    <?php if(have_rows('company_opening_hours','options') ):
+                            while( have_rows('company_opening_hours','options')): the_row();?>
+                                <time itemprop="openingHours" datetime="<?php the_sub_field('opening_hours_day','options');?>"><?php the_sub_field('opening_hours_time','options');?></time>
+                            <?php endwhile; endif;?>
+                </div>
+            </li>
         </ul>
+
         <div class="footer-social-icons">
-            <a href="<?php echo get_theme_mod('facebook_url_field');?>" class="icon socialfb" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="<?php echo get_theme_mod('twitter_url_field');?>" class="icon socialtw" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="<?php echo get_theme_mod('google_plus_url_field');?>" class="icon socialgo" target="_blank"><i class="fa fa-google-plus"></i></a>
-            <a href="<?php echo get_theme_mod('yelp_url_field');?>" class="icon socialgo" target="_blank"><i class="fa fa-yelp"></i></a>
+            <ul class="list-inline">
+                    <li><a href="<?php the_field('company_fb','options');?>" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i> </a></li>
+                    <li><a href="<?php the_field('company_twitter','options');?>" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i> </a></li>
+                    <li><a href="<?php the_field('company_gmb','options');?>" target="_blank" rel="nofollow"><i class="fa fa-google-plus"></i> </a></li>
+                    <li><a href="<?php the_field('company_yelp','options');?>" target="_blank" rel="nofollow"><i class="fa fa-yelp"></i> </a></li>
+                </ul>
         </div>
+
 
         <div class="clear"></div>
     </div>

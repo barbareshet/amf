@@ -2,7 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-12 form-wrap" id="hp-form">
-                here is the contact form
+                <?php if(is_active_sidebar('hp-optin-top')){
+                    dynamic_sidebar('hp-optin-top');
+                }
+                ?>
             </div>
             <div class="col-md-8 col-sm-12 cta-wrap" id="hp-cta">
                 <h3 class="cta-title"><?php the_field('hp_optin_title');?></h3>
