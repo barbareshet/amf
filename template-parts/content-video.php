@@ -18,7 +18,7 @@
 
 
                 <?php
-                    $videos = get_field('videos_to_show');
+                $videos = get_field('videos_to_show');
                 if($videos) :?>
                 <?php foreach ($videos as $video) :?>
                     <div class="col-md-4 col-sm-6 col-xs-12 video-warp panel">
