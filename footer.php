@@ -10,6 +10,8 @@
  */
 get_template_part('template-parts/globals/content', 'bottom-optin-page');
 get_template_part('template-parts/content', 'testimonials');
+$footer_socials = get_field('socials','option');
+$socials_section_title = get_field('socials_section_title', 'option');
 ?>
 
 	</div><!-- #content -->
@@ -49,6 +51,38 @@ get_template_part('template-parts/content', 'testimonials');
                     ?>
                 </div>
             </div><!--/.row-->
+            <?php
+            if ( is_user_logged_in() && current_user_can('administrator')){
+                if ( have_rows('socials','option') ){ ?>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <?php if ( !empty( $socials_section_title ) ) { ?>
+                                    <h4 class="socials-title">
+                                        <?php echo $socials_section_title;?>
+                                    </h4>
+                                <?php } ?>
+                                <ul class="footer-socials list-inline">
+                                    <?php while ( have_rows('socials','option')){
+                                        the_row();
+                                        $social = [
+                                            'name' => get_sub_field('name', 'option'),
+                                            'icon' => get_sub_field('icon', 'option'),
+                                            'link' => get_sub_field('link', 'option'),
+                                        ];?>
+                                        <li class="footer-social-item">
+                                            <a href="<?php echo $social['link'];?>" class="footer-social-item-link text-black" target="_blank" title="<?php echo $social['name'];?>">
+                                                <i class="fa fa-<?php echo strtolower($social['icon']);?>"></i>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <?php }
+            }
+            ?>
             <div class="site-info row" style="text-align: center;">
                 <?php printf( esc_html__( 'All Right Reserved %1$s', 'amf' ), '&copy;' ); ?>
                 <span class="sep"> | </span>
